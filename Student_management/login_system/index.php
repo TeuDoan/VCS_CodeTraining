@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo isset($_SESSION['username']);
 if (isset($_SESSION['username'])) {
     header("Location: /Student_management/dashboard/index.php");
     exit();

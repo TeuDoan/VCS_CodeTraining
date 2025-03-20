@@ -1,7 +1,5 @@
 <?php
-
-
-
+session_start();
 require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_id"] = $id;
             $_SESSION["username"] = $username;
 
-            header("Location: ../dashboard/index.php");
+            header("Location: /Student_management/dashboard/index.php");
             exit();
         } else {
             echo "Invalid password!";
