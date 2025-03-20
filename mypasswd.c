@@ -25,7 +25,13 @@ void change_password(const char *username) {
         exit(EXIT_FAILURE);
     }
 
-    // Enter new password
+    old_pass = getpass("Enter current password: ");
+    encrypted_old = crypt(old_pass, sp_entry->sp_pwdp);
+    if (strcmp(encrypted_old, sp_entry->sp_pwdp) != 0) {
+        printf("Incorrect current password!\n");
+        exit(EXIT_FAILURE);
+    }
+
     new_pass = getpass("Enter new password: ");
     confirm_pass = getpass("Re-enter new password: ");
 
@@ -34,7 +40,7 @@ void change_password(const char *username) {
         exit(EXIT_FAILURE);
     }
 
-    // Encrypt new password
+
     encrypted_new = crypt(new_pass, sp_entry->sp_pwdp);
 
     // Open shadow file to change password
