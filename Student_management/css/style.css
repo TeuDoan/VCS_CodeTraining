@@ -1,146 +1,266 @@
-/* General Page Styling */
+/* General Styles */
 body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: url('../images/dashboard-background.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
     text-align: center;
-    color: #ffffff;
 }
 
-/* Overlay Effect for Better Readability */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: -1;
+h1, h2 {
+    color: #333;
 }
 
 /* Navigation Bar */
-ul {
-    list-style-type: none;
-    padding: 0;
-    background: rgba(30, 55, 80, 0.8);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+nav {
+    background-color: #007bff;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     overflow: hidden;
 }
 
-li a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-}
-
-/* Table Container */
-.table-container {
-    width: 90%;
-    max-width: 800px;
-    height: 250px;
-    margin: 20px auto;
-    border-radius: 8px;
-    overflow: auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.6);
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 15px;
-    background: transparent;
-    color: #ffffff;
-}
-
-/* Table Headers */
-th {
-    background: rgba(40, 70, 100);
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    text-align: center;
-    padding: 12px;
-    text-transform: uppercase;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Table Data */
-td {
-    padding: 12px;
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Alternating Row Colors */
-tr:nth-child(even) {
-    background: rgba(100, 130, 150, 0.3);
-}
-
-tr:nth-child(odd) {
-    background: rgba(60, 90, 120, 0.3);
-}
-
-/* Hover Effect */
-tr:hover {
-    background: rgba(180, 200, 220, 0.4);
-    transition: 0.3s;
-}
-
-/* Scrollbar Styling */
-.table-container::-webkit-scrollbar {
-    width: 10px;
-}
-
-.table-container::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-.table-container::-webkit-scrollbar-thumb {
-    background: rgba(100, 140, 180, 0.8);
-    border-radius: 5px;
-}
-
-.table-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(60, 100, 140, 0.9);
-}
-
-/* Logout Button */
-a.logout-btn {
-    display: inline-block;
-    padding: 12px 25px;
+th {
+    background-color: #007bff;
     color: white;
-    background: linear-gradient(90deg, #dc3545, #b52a37);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #d1ecf1;
+    cursor: pointer;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    width: 50%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.profile-container img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.profile-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.profile-container a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
-a.logout-btn:hover {
-    background: linear-gradient(90deg, #b52a37, #901d28);
-    transform: scale(1.05);
+.profile-container a:hover {
+    background-color: #0056b3;
+}
+
+/* Edit Profile Page Styles */
+.edit-profile-container {
+    width: 60%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.edit-profile-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-profile-container label {
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.edit-profile-container input, 
+.edit-profile-container textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-profile-container .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.edit-profile-container .form-group label {
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.edit-profile-container .form-group input {
+    width: 75%;
+}
+
+.edit-profile-container img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Homework Page Styles */
+.homework-container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homework-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.homework-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homework-container input, 
+.homework-container textarea, 
+.homework-container button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.homework-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.homework-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Login Page Styles */
+.login-container {
+    width: 40%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.login-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
 }
