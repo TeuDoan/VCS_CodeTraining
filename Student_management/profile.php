@@ -72,6 +72,7 @@ if ($isOwner) {
         <a href="./index.php">Home</a>
         <a href="./profile.php?uuid=<?php echo htmlspecialchars($_SESSION['uuid']); ?>">Profile</a>
         <a href="./homework.php">Homework</a>
+        <a href="./submission.php">Homework submission</a>
         <a href="./logout.php">Logout</a>
     </nav>
 
