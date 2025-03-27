@@ -1,3 +1,4 @@
+```
 student-management/
 │── css/               # Stylesheets for the application
 │   ├── style.css      # Main CSS file
